@@ -1,14 +1,15 @@
 const express = require("express");
 const cors = require("cors");
 const { MongoClient, ObjectId } = require("mongodb");
-
+const path = require("path");
 const app = express();
 const port = 5000;
 
 app.use(cors());
 app.use(express.json());
+app.use(express.static(path.join(__dirname, "frontend")));
 
-const uri = process.env.MONGO_URI || "mongodb://3.84.159.138:27017";
+const uri = process.env.MONGO_URI || "mongodb://127.0.0.1:27017";
 const client = new MongoClient(uri);
 let db;
 
