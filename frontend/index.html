@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/welcome.css">
+    <title>DVD Rental System</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the DVD Rental System</h1>
+        <p>Select your role:</p>
+        <button onclick="navigateTo('login.html', 'customer')">Customer</button>
+        <button onclick="navigateTo('login.html', 'manager')">Manager</button>
+    </div>
+    <script>
+        function navigateTo(page, role) {
+            localStorage.setItem("role", role);
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>

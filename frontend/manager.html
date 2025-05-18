@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/manager.css">
+    <title>Manager Dashboard</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome, Manager</h1>
+        <form id="addDvdForm">
+            <input type="text" id="title" placeholder="DVD Title" required>
+            <input type="text" id="genre" placeholder="Genre" required>
+            <input type="number" id="stock" placeholder="Stock" required>
+            <input type="date" id="releaseDate" placeholder="Release Date" required>
+            <input type="number" id="price" placeholder="Price" required>
+            <button type="submit">Add DVD</button>
+        </form>
+
+        <h2>DVDs</h2>
+        <div id="dvdList"></div>
+
+        <div id="updateDvdModal" style="display: none;">
+            <h2>Update DVD</h2>
+            <form id="updateDvdForm">
+                <input type="text" id="updateTitle" placeholder="DVD Title" required>
+                <input type="text" id="updateGenre" placeholder="Genre" required>
+                <input type="number" id="updateStock" placeholder="Stock" required>
+                <input type="date" id="updateReleaseDate" placeholder="Release Date" required>
+                <input type="number" id="updatePrice" placeholder="Price" required>
+                <button type="submit">Update DVD</button>
+                <button type="button" id="cancelUpdate">Cancel</button>
+            </form>
+        </div>
+         <h2>Rentals</h2>
+         <div id="rentalList"></div>
+
+         <h2>Payments</h2>
+         <div id="paymentList"></div>
+         <h3>Total Income: <span id="totalIncome">$0</span></h3>
+         <button type="button" id="back">Back to home</button>
+     </div>
+    </div>
+
+    <script src="js/manager.js"></script>
+</body>
+</html>

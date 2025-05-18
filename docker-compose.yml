@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    image: yourdockerhubusername/dvd-rental-system
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./frontend:/usr/src/app/frontend
+    depends_on:
+      - mongo
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/rental
+    restart: unless-stopped
+  
+  mongo:
+    image: mongo:5.0
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    restart: unless-stopped
+
+volumes:
+  mongodb_data:

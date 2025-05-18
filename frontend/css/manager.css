@@ -1,0 +1,93 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #f8ffae, #43c6ac);
+    color: #333;
+    margin: 150px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+}
+
+.container {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+form input, form button {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: calc(50% - 20px);
+}
+
+form button {
+    background: #4caf50;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s ease;
+}
+
+form button:hover {
+    background: #45a049;
+}
+
+#dvdList, #rentalList, #paymentList {
+    margin-top: 20px;
+    text-align: left;
+}
+
+button {
+    padding: 10px 15px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #2980b9;
+}
+
+#updateDvdModal {
+    display: none;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#updateDvdModal form {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 80%;
+    max-width: 400px;
+}

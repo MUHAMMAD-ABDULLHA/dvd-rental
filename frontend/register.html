@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/register.css">
+    <title>Register</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Register as <span id="role"></span></h1>
+        <form id="registerForm">
+            <input type="text" id="id" placeholder="ID (CustomerID/ManagerID)" required>
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="text" id="age" placeholder="Age (For Customers Only)">
+            <input type="text" id="address" placeholder="Address">
+            <input type="text" id="registrationNo" placeholder="Registration No (Customers Only)">
+            <input type="text" id="contactNo" placeholder="Contact No">
+            <input type="date" id="dob" placeholder="Date of Birth (Customers Only)">
+            <input type="text" id="gender" placeholder="Gender (Customers Only)">
+            <input type="text" id="department" placeholder="Department (Managers Only)">
+            <button type="submit">Register</button>
+        </form>             
+        <p>Already have an account? <a href="login.html">Login here</a></p>
+    </div>
+    <script src="js/register.js"></script>
+</body>
+</html>
